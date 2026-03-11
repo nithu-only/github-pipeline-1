@@ -3,7 +3,7 @@ name: hello-workflow
 #on when it should trigger
 on:
   push:
-    branches: [master]
+    branches: [main]
 #jobs inside the workflow
 jobs:
   #name of the first job: greet
