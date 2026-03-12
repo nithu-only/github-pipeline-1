@@ -1,6 +1,6 @@
 #name of the workflow
 name: hello-workflow
-#on when it should trigger
+#on when it should trigger [ This is the automatic workflow and called "deployment" ] 
 on:
   push:
     branches: [main]
