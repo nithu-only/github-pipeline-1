@@ -1,8 +1,14 @@
 #Name of the workflow 
 name: CiCd
+#This triggers only if manually run the pipeline
+# on:
+#   workflow_dispatch: 
 
+#Triggerring action when particular file get updated in main branch
 on:
-  workflow_dispatch: 
+  push:
+    branches: main
+    paths: '**.html'
 
 jobs:    
   clone:
