@@ -4,12 +4,26 @@ name: CiCd
 # on:
 #   workflow_dispatch: 
 
-#Triggerring action when particular file get updated in main branch
-on:
-  push:
-    branches: main
-    paths: '**.html'
+#Triggerring action when particular .html file get updated in main branch
+# on:
+#   push:
+#     branches: main
+#     paths: '**.html'
 
+#This lets u to select the option among the list of choices
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: This is the environment value where this workflow runs
+        default: 'clone'
+        required: true
+        type: choice
+        options:
+          - clone
+          - test
+          - deploy
+    
 jobs:    
   clone:
     needs: [deploy,run]
