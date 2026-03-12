@@ -6,6 +6,7 @@ on:
 
 jobs:    
   clone:
+    needs: [deploy,run]
     runs-on: ubuntu-slim
     steps:
       - name: code clonning
@@ -17,13 +18,12 @@ jobs:
       - name: testing the code
         run: echo "Testing the code clonned from the Github"
   run:
-    needs: [clone,test]
+    needs: deploy
     runs-on: ubuntu-slim
     steps:
       - name: run the app
         run: echo "Running the app"
   deploy:
-    needs: [run]
     runs-on: ubuntu-slim
     steps:
       - name: deploying the app 
