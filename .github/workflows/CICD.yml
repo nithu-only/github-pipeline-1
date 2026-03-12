@@ -1,0 +1,27 @@
+#Name of the workflow 
+name: CiCd
+
+on:
+  workflow_dispatch: 
+
+jobs:    
+  clone:
+    runs-on: ubuntu-slim
+    steps:
+      - name: code clonning
+        run: echo "Clonning the code from github"
+  test:
+    runs-on: ubuntu-slim
+    steps:
+      - name: testing the code
+        run: echo "Testing the code clonned from the Github"
+  run:
+    runs-on: ubuntu-slim
+    steps:
+      - name: run the app
+        run: echo "Running the app"
+  deploy:
+    runs-on: ubuntu-slim
+    steps:
+      - name: deploying the app 
+        run: echo "Deploying the app in docker container"
