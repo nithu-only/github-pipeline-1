@@ -11,16 +11,19 @@ jobs:
       - name: code clonning
         run: echo "Clonning the code from github"
   test:
+    needs: clone
     runs-on: ubuntu-slim
     steps:
       - name: testing the code
         run: echo "Testing the code clonned from the Github"
   run:
+    needs: [clone,test]
     runs-on: ubuntu-slim
     steps:
       - name: run the app
         run: echo "Running the app"
   deploy:
+    needs: [run]
     runs-on: ubuntu-slim
     steps:
       - name: deploying the app 
