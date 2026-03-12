@@ -16,3 +16,10 @@ jobs:
           run: echo "Hello Nithin"
         - name: get the username
           run: echo "I am $USER"
+  details:
+      runs-on: ubuntu-slim
+      steps:
+        - name: python and docker versions
+          run: docker --version && python --version
+        - name: getting path
+          run: which docker && which python
