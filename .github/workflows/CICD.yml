@@ -26,7 +26,6 @@ on:
     
 jobs:    
   clone:
-    if: inputs.environment=='test'
     needs: [deploy,run]
     runs-on: ubuntu-slim
     steps:
@@ -45,6 +44,7 @@ jobs:
       - name: run the app
         run: echo "Running the app"
   deploy:
+    if: inputs.environment=='deploy'
     runs-on: ubuntu-slim
     steps:
       - name: deploying the app 
