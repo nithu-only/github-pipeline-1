@@ -26,6 +26,7 @@ on:
     
 jobs:    
   clone:
+    if: inputs.environment=='test'
     needs: [deploy,run]
     runs-on: ubuntu-slim
     steps:
