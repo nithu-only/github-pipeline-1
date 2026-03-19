@@ -26,25 +26,25 @@ on:
     
 jobs:    
   clone:
-    needs: [deploy,run]
     runs-on: ubuntu-slim
+    if: inputs.environment=='clone'
     steps:
       - name: code clonning
         run: echo "Clonning the code from github"
   test:
-    needs: clone
+    needs: [clone,run]
     runs-on: ubuntu-slim
     steps:
       - name: testing the code
         run: echo "Testing the code clonned from the Github"
   run:
-    needs: deploy
+    needs: clone
     runs-on: ubuntu-slim
     steps:
       - name: run the app
         run: echo "Running the app"
   deploy:
-    if: inputs.environment=='deploy'
+    
     runs-on: ubuntu-slim
     steps:
       - name: deploying the app 
