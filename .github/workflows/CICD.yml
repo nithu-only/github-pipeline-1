@@ -44,7 +44,6 @@ jobs:
       - name: run the app
         run: echo "Running the app"
   deploy:
-    
     runs-on: ubuntu-slim
     steps:
       - name: deploying the app 
