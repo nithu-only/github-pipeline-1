@@ -3,7 +3,7 @@ name: Portfolio
 permissions:
     pages: write
     id-token: write
-    
+
 on:
     push:
         branches: [main]
@@ -28,6 +28,8 @@ jobs:
 
             # static code artifacts
             - name: Upload static files
+              with:
+                path: "."
               uses: actions/upload-pages-aftifact@v4 
 
             # deploy pages 
