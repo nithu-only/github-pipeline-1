@@ -1,6 +1,117 @@
-<html>
-  <body>
-    <h1>This Repo Demonstrates Github Actions!</h1>
-    <p>Workflow Have different jobs & jobs need to have seperate runners</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nithinkumar | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+    min-height:100vh;
+}
+.container{width:90%;margin:auto;padding:20px}
+.nav{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:15px 30px;margin-top:20px;
+    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,0.08);
+    border-radius:15px;
+}
+.nav h1{font-size:22px}
+.nav a{color:#fff;text-decoration:none;margin-left:20px;transition:0.3s}
+.nav a:hover{color:#00e0ff}
+.hero{
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+    margin-top:60px;
+}
+.hero h2{font-size:40px;margin-bottom:10px}
+.hero p{opacity:0.8}
+.card{
+    margin-top:40px;padding:30px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    transition:0.4s;
+}
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.section-title{margin-top:60px;font-size:28px;text-align:center}
+.btn{
+    display:inline-block;margin-top:20px;padding:10px 20px;
+    background:rgba(0,224,255,0.2);
+    border-radius:25px;text-decoration:none;color:#fff;
+    transition:0.3s;
+}
+.btn:hover{background:#00e0ff;color:#000}
+.footer{text-align:center;margin-top:50px;opacity:0.6}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="nav">
+    <h1>Nithinkumar</h1>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+<div class="hero">
+    <h2>Hi, I'm Nithinkumar 👋</h2>
+    <p>Technical Trainer | Python Developer | Passionate Educator</p>
+    <a href="#contact" class="btn">Hire Me</a>
+</div>
+
+<h2 class="section-title" id="about">About Me</h2>
+<div class="card">
+    <p>I am a passionate Technical Trainer from Mangalore with over a year of teaching experience. I specialize in simplifying complex programming concepts like Python, C++, and problem-solving techniques. My teaching approach focuses on real-time examples, making learning practical and engaging.</p>
+</div>
+
+<h2 class="section-title" id="skills">Skills</h2>
+<div class="grid">
+    <div class="card">Python Programming</div>
+    <div class="card">C++ (OOP & Concepts)</div>
+    <div class="card">UI/UX Basics</div>
+    <div class="card">Teaching & Communication</div>
+</div>
+
+<h2 class="section-title" id="projects">Projects</h2>
+<div class="grid">
+    <div class="card">
+        <h3>Student Training Modules</h3>
+        <p>Designed structured modules with MCQs, viva questions, and practical coding problems.</p>
+    </div>
+    <div class="card">
+        <h3>Python Programs Collection</h3>
+        <p>Created beginner-friendly programs covering loops, conditions, OOP, and file handling.</p>
+    </div>
+    <div class="card">
+        <h3>Interview Preparation Guide</h3>
+        <p>Prepared technical training material for candidates aiming for IT roles like Infosys Trainer.</p>
+    </div>
+</div>
+
+<h2 class="section-title" id="contact">Contact</h2>
+<div class="card" style="text-align:center">
+    <p>Let's work together or build something amazing!</p>
+    <a href="#" class="btn">Connect</a>
+</div>
+
+<div class="footer">
+    <p>© 2026 Nithinkumar | Designed with Glassmorphism UI</p>
+</div>
+
+</div>
+
+</body>
 </html>
