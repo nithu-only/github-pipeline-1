@@ -30,7 +30,7 @@ jobs:
             - name: Upload static files
               with:
                 path: "."
-              uses: actions/upload-pages-aftifact@v4 
+              uses: actions/upload-pages-aftifact@v3 
 
             # deploy pages 
             - name: Deploy
