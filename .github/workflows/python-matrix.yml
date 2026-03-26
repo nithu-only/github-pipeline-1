@@ -24,7 +24,7 @@ jobs:
       - name: run Linter
         run: flake8 app.py
 
-        
+
       
 
   
