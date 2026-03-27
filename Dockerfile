@@ -10,5 +10,8 @@ COPY . .
 #Installing Dependencies
 RUN pip install -r requirements.txt
 
+#Expose port for this app
+EXPOSE 80
+
 #Run the app
 CMD [ "python","app.py" ]
