@@ -4,7 +4,10 @@ on:
     workflow_dispatch:
 
 jobs:
-    deploy: 
+    
+    deploy:
+        env:
+            DOCKERHUB_USER: ${{vars.GITHUB_USER}} 
         runs-on: self-hosted
         steps:
             - name: Checkout Code
