@@ -7,11 +7,14 @@ jobs:
     
     deploy:
         env:
-            DOCKERHUB_USER: ${{vars.GITHUB_USER}} 
+            DOCKERHUB_USERNAME: ${{vars.GITHUB_USER}} 
         runs-on: self-hosted
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
+
+            - name: Set up Docker Compose
+              uses: docker/setup-compose-action@v2
 
             - name: Deploy app with docker compose
               run: docker compose up -d --build
