@@ -7,7 +7,7 @@ jobs:
     
     deploy:
         env:
-            DOCKERHUB_USERNAME: ${{vars.GITHUB_USER}} 
+            DOCKERHUB_USER: ${{vars.DOCKERHUB_USERNAME}} 
         runs-on: self-hosted
         steps:
             - name: Checkout Code
